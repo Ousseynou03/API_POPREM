@@ -58,21 +58,21 @@ class API_POPREM  extends  Simulation{
       exec(http("Get_parameters")
         .get("/api/parameters")
         .header("Content-Type", "application/json")
-        .header("Authorization", "Bearer ${access_token}")
+        .header("Authorization", "Bearer #{access_token}")
         .check(status.is(200)))
     }
 
 
   def Get_employees_matricules(): ChainBuilder = {
       exec(http("Get_employees_matriculates")
-        .get("/api/employees/${matricule}")
+        .get("/api/employees/#{matricule}")
         .header("Content-Type", "application/json")
-        .header("Authorization", "Bearer ${access_token}")
+        .header("Authorization", "Bearer #{access_token}")
         .check(status.is(200)))
   }
   def Get_employees_matricules_peers():ChainBuilder  = {
       exec(http("Get_employees_matricules_peers")
-        .get("/api/employees/${matricule}/peers")
+        .get("/api/employees/#{matricule}/peers")
         .header("Content-Type", "application/json")
         .header("Authorization", "Bearer #{access_token}")
         .check(status.is(200)))
@@ -92,7 +92,7 @@ class API_POPREM  extends  Simulation{
       exec(http("Get_employees_salesUnitId")
         .get("/api/performance/sales-units/#{salesUnitId}/temporality/#{temporality}")
         .header("Content-Type", "application/json")
-        .header("Authorization", "Bearer ${access_token}")
+        .header("Authorization", "Bearer #{access_token}")
         .check(status.is(200))
       )
   }
