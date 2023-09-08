@@ -45,8 +45,7 @@ class API_POPREM  extends  Simulation{
   def Autentication() =
   {
     exec(http("POST")
-      .post("https://ssotest.interne.galerieslafayette.com/auth/realms/GL-ENTREPRISE/protocol/openid-connect/token")
-      //.formParam("client_id", "poprem-pp-front")
+      .post("https:")
       .formParam("username", "p_portapve")
       .formParam("password", "Service12345!")
       .formParam("grant_type", "password")
