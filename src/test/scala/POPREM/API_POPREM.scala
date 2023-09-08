@@ -11,15 +11,6 @@ import scala.language.postfixOps
 class API_POPREM  extends  Simulation{
 
   private val  host : String =System.getProperty("urlCible", "https:")
-/*  private val  VersionAppli: String  = System.getProperty("VersionApp", "Vxx.xx.xx")
-  private val  TpsMonteEnCharge: Int = System.getProperty("tpsMonte", "2").toInt
-  private val  DureeMax : Int = System.getProperty("dureeMax", "10").toInt + TpsMonteEnCharge
-  private val  TpsPalier: Int = System.getProperty("tpsPalier", (2*TpsMonteEnCharge).toString ).toInt
-  private val NbrIter: Int = System.getProperty("nbIter", "300").toInt
-  private val  LeCoeff : Int = System.getProperty("coeff", "100").toInt
-  private val  nbVu : Int = 1 * LeCoeff*/
-
-
 
 
   val FichierPath: String = System.getProperty("dataDir", "data/")
@@ -39,7 +30,7 @@ class API_POPREM  extends  Simulation{
 
   val httpProtocol = http.baseUrl(host)
     .acceptHeader("text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8")
-    .userAgentHeader("TESTS-DE-PERF")
+    .userAgentHeader("TESTS-DE-PERF-POPREM")
 
 
   def Autentication() =
